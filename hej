@@ -1,0 +1,112 @@
+package adittion;
+
+public class junit {
+	public int add(int a, int b)
+	{
+		return(a+b);
+		
+	}
+	public String concacat(String a, String b)
+	{
+		return(a+b);
+	}
+
+}
+
+
+package adittion;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+class junitTest {
+
+	@Test
+	void test() {
+		junit a = new junit();
+		int r = a.add(10,20);
+		assertEquals(30,r);
+	}
+
+}
+
+
+package adittion;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+class junitTest2 {
+
+	@Test
+	void test() {
+		junit a = new junit();
+		String h=a.concacat("abhijit"," nalla");
+		assertEquals("abhijit nalla",h);
+
+		
+	}
+
+}
+
+
+
+package circle;
+public class circle {
+	
+	private double radius;
+	circle(double r)
+	{
+		radius = r;
+	}
+	public float area()
+	{
+		return (float) (3.14*radius*radius);
+		
+	}
+	public float peri(float r)
+	{
+		return (float) (2*3.14*radius);
+	}
+   
+    	
+}
+
+
+package circle;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
+
+public class circletest {
+
+    @Test
+    public void test() {
+        circle a= new circle(5);
+        double r = a.area();
+        assertEquals(78.5,r);
+        System.out.print(r);
+    }
+}
+
+
+
+package british;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+public class danish {
+
+	public static void main(String[] args)throws InterruptedException  {
+		// if not added to the path in system variables then use the following command.
+		 //System.setProperty("webdriver.chrome.driver",path of executable file Chromedriver.exe")
+		 System.setProperty("webdriver.chrome.driver","C:/Users/Admin/Desktop/salenimumtools/chromedriver.exe");
+		 WebDriver driver = new ChromeDriver();
+		 driver.get("https://classroom.google.com/w/NjE2NTA4NzcxMzc1/t/all");
+		 System.out.println("Selenium Webdriver Script in Chrome browser | Software Testing Material");
+		 driver.close();
+		 }
+		}
+
+
+
