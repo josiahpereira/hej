@@ -108,5 +108,30 @@ public class danish {
 		 }
 		}
 
+jot form
+
+package jotform;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+public class form {
+
+   
+
+
+
+	public static void main(String[] args)throws InterruptedException  {
+		
+		 System.setProperty("webdriver.chrome.driver","C:/Users/Admin/Desktop/salenimumtools/chromedriver.exe");
+		 WebDriver driver = new ChromeDriver();
+		 driver.get("https://www.jotform.com/build/232201842087046/");
+		 System.out.println("Selenium Webdriver Script in Chrome browser | Software Testing Material");
+		 driver.findElement(By.id("first_4")).sendKeys("nehal");
+		 driver.findElement(By.id("first_3")).sendKeys("kalangutkar");
+		 driver.findElement(By.id("first_3")).sendKeys("nehal");
+		 driver.close();
+		 
+	}
+}
 
 
